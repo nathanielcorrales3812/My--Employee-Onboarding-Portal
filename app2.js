@@ -42,6 +42,19 @@ document.querySelector('#btnGoToTwo').addEventListener('click', () => {
         return; 
     }
 
+    else if (userAge.value.trim() < 18 ) {
+        errorAlert.textContent = "VALIDATION ERROR: Age required must be 18 to 100";
+        errorAlert.classList.remove('d-none');
+        return; 
+    }
+
+    else if (userAge.value.trim() > 100 ) {
+        errorAlert.textContent = "VALIDATION ERROR: Age required must be 18 to 100";
+        errorAlert.classList.remove('d-none');
+        return; 
+    }
+
+
     else if (userGender.value.trim() === "") {
         errorAlert.textContent = "VALIDATION ERROR: Gender required, cannot be empty.";
         errorAlert.classList.remove('d-none');
